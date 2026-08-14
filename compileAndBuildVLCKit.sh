@@ -30,7 +30,9 @@ if [ -z "$MAKEFLAGS" ]; then
     MAKEFLAGS="-j$(sysctl -n machdep.cpu.core_count || nproc)";
 fi
 
-TESTEDHASH="c9628afc4" # libvlc hash that this version of VLCKit is build on
+VLC_REPOSITORY="https://github.com/Athlon-Optics/vlc.git"
+VLC_BRANCH="fix/x10-live-timestamps-4.0.0a21"
+TESTEDHASH="f84027c506c3f2642abd744cb80b89685fdd9687" # Athlon VLC X10 candidate
 
 usage()
 {
@@ -521,11 +523,11 @@ if [ "$VLCROOT" = "" ]; then
 
     if [ "$NONETWORK" != "yes" ]; then
         if ! [ -e vlc ]; then
-            git clone https://code.videolan.org/videolan/vlc.git --branch master --single-branch vlc
+            git clone "${VLC_REPOSITORY}" --branch "${VLC_BRANCH}" --single-branch vlc
             info "Applying patches to vlc.git"
             cd vlc
-            git checkout -B localBranch ${TESTEDHASH}
-            git branch --set-upstream-to=origin/master localBranch
+            git checkout -B localBranch "${TESTEDHASH}"
+            git branch --set-upstream-to="origin/${VLC_BRANCH}" localBranch
             git am ${ROOT_DIR}/libvlc/patches/*.patch
             if [ $? -ne 0 ]; then
                 git am --abort
