@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-14T12:09:20Z",
+  "release": {
+    "version": "4.0.0a21-sp.1-rc.1",
+    "tag": "4.0.0a21-sp.1-rc.1",
+    "asset": "SwingPulseVLCKit-4.0.0a21-sp.1-rc.1.zip",
+    "status": "release-candidate",
+    "device_validation": "pending"
+  },
+  "source": {
+    "vlckit_repository": "https://github.com/Athlon-Optics/vlckit.git",
+    "vlckit_branch": "build/x10-vlckit-4.0.0a21",
+    "vlckit_build_commit": "02f14c7bf90e3832dbda97339a6170cbb73a68d0",
+    "vlckit_upstream_tag": "4.0.0a21",
+    "vlckit_upstream_commit": "e8ed62f40c87dd5c5ed73812da8fa6a7bc1e58aa",
+    "vlc_repository": "https://github.com/Athlon-Optics/vlc.git",
+    "vlc_branch": "fix/x10-live-timestamps-4.0.0a21",
+    "vlc_candidate_commit": "f84027c506c3f2642abd744cb80b89685fdd9687",
+    "vlc_upstream_commit": "c9628afc4b221b171ec2d9e028782b9eb1247426",
+    "vlckit_patch_count": 20,
+    "vlc_post_patch_commit": "52a3e0145a78544ea6b5484eb618171343f7e079"
+  },
+  "build": {
+    "command": "./compileAndBuildVLCKit.sh -n -f -r",
+    "configuration": "Release",
+    "xcode_version": "26.6",
+    "xcode_build": "17F113",
+    "iphoneos_sdk": "26.5",
+    "iphonesimulator_sdk": "26.5",
+    "host_macos_version": "26.5.2",
+    "host_macos_build": "25F84"
+  },
+  "artifact": {
+    "path": "VLCKit.xcframework",
+    "format_version": "1.0",
+    "bundle_identifier": "org.videolan.vlckit",
+    "xcframework_info_plist_sha256": "ea0cb1ad90ed7462a9e00fafb19ae53c22eea85196a7e1f19e05289189f280b5",
+    "slices": [
+      {
+        "identifier": "ios-arm64",
+        "platform": "ios",
+        "architectures": [
+          "arm64"
+        ],
+        "minimum_os_version": "9.0",
+        "binary_sha256": "b9fd5711b84549cdc591bafd3768102e2eecdccef99f07026dfc5b606482a7e9",
+        "uuids": {
+          "arm64": "76D1AC39-898A-30AE-A68E-47B3440E4C7F"
+        },
+        "signature": "unsigned",
+        "dsym_uuid_match": true
+      },
+      {
+        "identifier": "ios-arm64_x86_64-simulator",
+        "platform": "ios-simulator",
+        "architectures": [
+          "arm64",
+          "x86_64"
+        ],
+        "minimum_os_versions": {
+          "arm64": "14.0",
+          "x86_64": "9.0"
+        },
+        "binary_sha256": "dd424d0d032dda5d9e9b846dfcc6f23c938fad87019ee840a5a08ac359f416a7",
+        "uuids": {
+          "arm64": "B797DBD3-C65F-39AD-BA49-297853B03BC0",
+          "x86_64": "6692B009-F95E-3FEA-91D1-F6B4CC6D4ED6"
+        },
+        "signature": "adhoc",
+        "dsym_uuid_match": true
+      }
+    ],
+    "required_behavior_markers": [
+      "rtsp-live-timestamps",
+      "rtsp-live-gap-timeout",
+      "repaired_pts",
+      "schedule_lag"
+    ]
+  },
+  "license": {
+    "file": "COPYING.txt",
+    "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+  }
+}
