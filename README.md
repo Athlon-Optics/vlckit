@@ -207,13 +207,13 @@ Build a release XCFramework for iOS device and simulator with:
 These options do not change default VLC behavior unless a client explicitly
 enables them.
 
-The immutable `4.0.0a21-sp.1-rc.1` release candidate contains the iOS device
+The immutable `4.0.0a21-sp.1-rc.2` release candidate contains the iOS device
 and simulator XCFramework slices, matching dSYMs, the LGPL license, and a
 source manifest. Integrate it through CocoaPods with the repository Podspec:
 
 ```ruby
 pod 'SwingPulseVLCKit',
-    :podspec => 'https://raw.githubusercontent.com/Athlon-Optics/vlckit/4.0.0a21-sp.1-rc.1/SwingPulseVLCKit.podspec'
+    :podspec => 'https://raw.githubusercontent.com/Athlon-Optics/vlckit/4.0.0a21-sp.1-rc.2/SwingPulseVLCKit.podspec'
 ```
 
 The RC is intended for controlled device validation. Promote it to

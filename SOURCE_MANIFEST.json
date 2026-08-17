@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-14T12:09:20Z",
+  "generated_at_utc": "2026-08-17T03:39:53Z",
   "release": {
-    "version": "4.0.0a21-sp.1-rc.1",
-    "tag": "4.0.0a21-sp.1-rc.1",
-    "asset": "SwingPulseVLCKit-4.0.0a21-sp.1-rc.1.zip",
+    "version": "4.0.0a21-sp.1-rc.2",
+    "tag": "4.0.0a21-sp.1-rc.2",
+    "asset": "SwingPulseVLCKit-4.0.0a21-sp.1-rc.2.zip",
     "status": "release-candidate",
     "device_validation": "pending"
   },
   "source": {
     "vlckit_repository": "https://github.com/Athlon-Optics/vlckit.git",
-    "vlckit_branch": "build/x10-vlckit-4.0.0a21",
-    "vlckit_build_commit": "02f14c7bf90e3832dbda97339a6170cbb73a68d0",
+    "vlckit_branch": "build/x10-vlckit-4.0.0a21-rc2",
+    "vlckit_build_commit": "6909a049c1a1961a6ca5b931c33fcba00dae3383",
     "vlckit_upstream_tag": "4.0.0a21",
     "vlckit_upstream_commit": "e8ed62f40c87dd5c5ed73812da8fa6a7bc1e58aa",
     "vlc_repository": "https://github.com/Athlon-Optics/vlc.git",
-    "vlc_branch": "fix/x10-live-timestamps-4.0.0a21",
-    "vlc_candidate_commit": "f84027c506c3f2642abd744cb80b89685fdd9687",
+    "vlc_branch": "fix/x10-live-edge-4.0.0a21",
+    "vlc_candidate_commit": "33250140f3b5497a8311f07b7f170452aab1cee9",
     "vlc_upstream_commit": "c9628afc4b221b171ec2d9e028782b9eb1247426",
     "vlckit_patch_count": 20,
-    "vlc_post_patch_commit": "52a3e0145a78544ea6b5484eb618171343f7e079"
+    "vlc_post_patch_commit": "99c6baccc5bec27cd2e287c429d643d5f67e136f"
   },
   "build": {
     "command": "./compileAndBuildVLCKit.sh -n -f -r",
@@ -35,7 +35,7 @@
     "path": "VLCKit.xcframework",
     "format_version": "1.0",
     "bundle_identifier": "org.videolan.vlckit",
-    "xcframework_info_plist_sha256": "ea0cb1ad90ed7462a9e00fafb19ae53c22eea85196a7e1f19e05289189f280b5",
+    "xcframework_info_plist_sha256": "1967cb49fe3f3d5f905bcaa726c7f2e74d5050fb6fa285eb4a6b6ea5b839790d",
     "slices": [
       {
         "identifier": "ios-arm64",
@@ -44,9 +44,9 @@
           "arm64"
         ],
         "minimum_os_version": "9.0",
-        "binary_sha256": "b9fd5711b84549cdc591bafd3768102e2eecdccef99f07026dfc5b606482a7e9",
+        "binary_sha256": "041eacd4400c438861fffa92efe3d6e9413cb6dd7cc513638ffc9641143ff323",
         "uuids": {
-          "arm64": "76D1AC39-898A-30AE-A68E-47B3440E4C7F"
+          "arm64": "52D75F6B-4AF2-336F-8002-9D8DF965EADA"
         },
         "signature": "unsigned",
         "dsym_uuid_match": true
@@ -62,10 +62,10 @@
           "arm64": "14.0",
           "x86_64": "9.0"
         },
-        "binary_sha256": "dd424d0d032dda5d9e9b846dfcc6f23c938fad87019ee840a5a08ac359f416a7",
+        "binary_sha256": "feb43b5f983b165f9c9db3c604045a5d22b92116faadc8d4ce05bb54f00a8bfc",
         "uuids": {
-          "arm64": "B797DBD3-C65F-39AD-BA49-297853B03BC0",
-          "x86_64": "6692B009-F95E-3FEA-91D1-F6B4CC6D4ED6"
+          "arm64": "A7114D5A-312A-3D7D-80B2-C37F5A451955",
+          "x86_64": "CEABEC60-B29C-332C-ABB2-C1AC2FE40696"
         },
         "signature": "adhoc",
         "dsym_uuid_match": true
@@ -75,7 +75,11 @@
       "rtsp-live-timestamps",
       "rtsp-live-gap-timeout",
       "repaired_pts",
-      "schedule_lag"
+      "schedule_lag",
+      "x10-live-max-delay",
+      "live-edge-age",
+      "render-late",
+      "gap-recovery"
     ]
   },
   "license": {
