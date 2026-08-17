@@ -31,8 +31,8 @@ if [ -z "$MAKEFLAGS" ]; then
 fi
 
 VLC_REPOSITORY="https://github.com/Athlon-Optics/vlc.git"
-VLC_BRANCH="fix/x10-live-timestamps-4.0.0a21"
-TESTEDHASH="f84027c506c3f2642abd744cb80b89685fdd9687" # Athlon VLC X10 candidate
+VLC_BRANCH="fix/x10-live-edge-4.0.0a21"
+TESTEDHASH="33250140f3b5497a8311f07b7f170452aab1cee9" # Athlon VLC X10 candidate
 
 usage()
 {

@@ -182,19 +182,21 @@ More information can be found under `./compileAndBuildVLCKit.sh -h`.
 
 ### Athlon X10 build
 
-The `build/x10-vlckit-4.0.0a21` branch is based on the upstream VLCKit
+The `build/x10-vlckit-4.0.0a21-rc2` branch is based on the upstream VLCKit
 `4.0.0a21` tag (`e8ed62f40c87dd5c5ed73812da8fa6a7bc1e58aa`). It builds against
-the Athlon VLC branch `fix/x10-live-timestamps-4.0.0a21` at commit
-`f84027c506c3f2642abd744cb80b89685fdd9687`. That VLC commit is based on
+the Athlon VLC branch `fix/x10-live-edge-4.0.0a21` at commit
+`33250140f3b5497a8311f07b7f170452aab1cee9`. That VLC commit is based on
 upstream VLC commit `c9628afc4b221b171ec2d9e028782b9eb1247426`, the VLC revision
 selected by the upstream VLCKit tag.
 
-The Athlon VLC branch adds two opt-in live555 behaviors:
+The Athlon VLC branch adds three opt-in X10 live playback behaviors:
 
 - `rtsp-live-timestamps` uses the local monotonic arrival clock for live RTP
   senders with invalid timestamp progression.
 - `rtsp-live-gap-timeout` keeps the current RTSP session open for a bounded
   recovery interval and resets the local timeline when RTP resumes.
+- `x10-live-max-delay` drops expired decoded pictures while a newer picture is
+  queued, bounding vout backlog without discarding the last available picture.
 
 Build a release XCFramework for iOS device and simulator with:
 
